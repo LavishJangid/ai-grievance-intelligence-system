@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.5.1
+joblib
+nltk
+gunicorn
+python-multipart
