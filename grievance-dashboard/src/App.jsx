@@ -1,7 +1,7 @@
-import DashboardPage from './pages/DashboardPage'
+import ModernConsole from './pages/ModernConsole'
 
 function App() {
-  return <DashboardPage />
+  return <ModernConsole />
 }
 
 export default App

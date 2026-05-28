@@ -8,6 +8,7 @@ from datetime import datetime, timezone
 from functools import lru_cache
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from src.models.predict import DepartmentPredictor
@@ -22,6 +23,14 @@ app = FastAPI(
     title="Infotact Grievance AI",
     version=MODEL_VERSION,
     description="Production inference API for department routing, sentiment, and urgency scoring.",
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
